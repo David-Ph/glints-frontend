@@ -1,9 +1,3 @@
-const newItemForm = document.querySelector("#new-item-form");
-const newItemName = document.querySelector("#new-item-name");
-const newItemStock = document.querySelector("#new-item-stock");
-const newItemPrice = document.querySelector("#new-item-price");
-const newItemCategory = document.querySelector("#new-item-category");
-
 newItemForm.addEventListener("submit", function (event) {
   event.preventDefault();
   fetch("https://glints-assessment.herokuapp.com/items", {

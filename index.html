@@ -87,25 +87,121 @@
                 </tr>
                 </thead>
                 <tbody class="item-table-body"></tbody>
-          </table>
-          <nav class="pagination" role="navigation" aria-label="pagination">
-            <a class="pagination-previous">Previous</a>
-            <a class="pagination-next">Next page</a>
-            <ul class="pagination-list">
-                <!-- <li>
-                    <a class="pagination-link">1</a>
-                </li> -->
-                <!-- <li>
-                    <span class="pagination-ellipsis">&hellip;</span>
-                </li> -->
-            </ul>
+            </table>
+            <nav class="pagination" role="navigation" aria-label="pagination">
+                <ul class="pagination-list pagination-item-table">
+                </ul>
             </nav>
           </div>
       </div>
       </div>
     </div>
-    <script src="js/functions.js"></script>
+
+    <div class="modal stock-modal">
+        <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <form id="stock-form" action="">
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control">
+                                <input id="stock-modal-name" readonly class="input" type="text" value="Item Name">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Increase or Reduce Stock</label>
+                            <div class="control">
+                                <input id="stock-modal-stock" class="input" type="number" value="55">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <button id="stock-modal-submit" class="button is-link">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+
+       <div class="modal edit-modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <form id="edit-form" action="">
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control">
+                                <input id="edit-modal-name" class="input" type="text" value="">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Edit Stock</label>
+                            <div class="control">
+                                <input id="edit-modal-stock" class="input" type="number" value="">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Edit Price</label>
+                            <div class="control">
+                                <input id="edit-modal-price" class="input" type="number" value="">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Edit Category</label>
+                            <div class="control">
+                                <select id="edit-modal-category">
+                                    <option value="drinks">Drinks</option>
+                                    <option value="toys">Toys</option>
+                                    <option value="candies">Candies</option>
+                                    <option value="cosmetics">Cosmetics</option>
+                                    <option value="snacks">Snacks</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <button id="edit-modal-submit" class="button is-link">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>  
+        </div>
+
+        <div class="modal history-modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Previous Stock</th>
+                            <th>Updated By</th>
+                            <th>New Stock</th>
+                            <th>Updated At</th>
+                        </tr>
+                        </thead>
+                        <tbody class="history-table-body"></tbody>
+                    </table>
+                    <nav class="pagination" role="navigation" aria-label="pagination">
+                        <ul class="pagination-list pagination-history-table">
+                        </ul>
+                    </nav>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <script src="js/global.js"></script>
     <script src="js/renderItems.js"></script>
+    <script src="js/itemActions.js"></script>
     <script src="js/createItem.js"></script>
     <script src="js/main.js"></script>
   </body>

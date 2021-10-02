@@ -12,3 +12,10 @@ th:first-child {
 #new-item-btn {
   margin-top: 1em;
 }
+
+.green-row {
+  background-color: hsl(171, 100%, 41%);
+}
+.red-row {
+  background-color: hsl(48, 100%, 67%);
+}

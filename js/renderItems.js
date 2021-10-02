@@ -1,6 +1,3 @@
-const tableBody = document.querySelector(".item-table-body");
-const paginationBody = document.querySelector(".pagination-list");
-
 async function loadItems(page = 1, limit = 5) {
   tableBody.innerHTML = "";
   paginationBody.innerHTML = "";
@@ -16,18 +13,19 @@ async function loadItems(page = 1, limit = 5) {
     item.category = capitalizeFirstLetter(item.category);
     let itemRow = `
         <tr class="list-item">
-            <td>${item.name}</td>
-            <td>${item.stock}</td>
-            <td>${item.price}</td>
-            <td>${item.category}</td>
+            <input type="hidden" class="itemId" value=${item._id}></input>
+            <td class="item-name">${item.name}</td>
+            <td class="item-stock">${item.stock}</td>
+            <td class="item-price">${item.price}</td>
+            <td class="item-category">${item.category}</td>
             <td>
                 <div class="buttons are-small">
-                <button class="button is-outlined is-info">Edit</button>
-                <button class="button is-outlined is-success">
+                <button class="button is-outlined is-info edit-btn">Edit</button>
+                <button class="button is-outlined is-success stock-btn">
                     Manage Stocks
                 </button>
-                <button class="button is-outlined is-primary">Stock History</button>
-                <button class="button is-outlined is-danger">Delete</button>
+                <button class="button is-outlined is-primary history-btn">Stock History</button>
+                <button class="button is-outlined is-danger delete-btn">Delete</button>
                 </div>
             </td>
         </tr>
