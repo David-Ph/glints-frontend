@@ -1,0 +1,10 @@
+/* .item-column {
+  border: 1px solid greenyellow;
+  border-radius: 10px;
+}
+.item-column:first-of-type {
+  border-right: none;
+} */
+th:first-child {
+  padding-left: 0;
+}
