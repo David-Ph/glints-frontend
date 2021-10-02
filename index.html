@@ -19,44 +19,81 @@
         </div>
       </div>
       <div class="columns">
-        <div class="item-column column">
-          <h2 class="title is-size-4">Add New items</h2>
+          <div class="column item-column">
+            <h2 class="title is-size-4">Add New items</h2>
+              <form action="" id="new-item-form">
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input
+                    id="new-item-name"
+                    class="input"
+                    type="text"
+                    placeholder="Item Name"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Stock</label>
+                <div class="control">
+                  <input
+                    id="new-item-stock"
+                    class="input"
+                    type="number"
+                    placeholder="Item Stock"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Price</label>
+                <div class="control">
+                  <input
+                    id="new-item-price"
+                    class="input"
+                    type="number"
+                    placeholder="Item Price"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Category</label>
+                <div class="control">
+                  <select id="new-item-category">
+                      <option value="drinks">Drinks</option>
+                      <option value="toys">Toys</option>
+                      <option value="candies">Candies</option>
+                      <option value="cosmetics">Cosmetics</option>
+                      <option value="snacks">Snacks</option>
+                  </select>
+              </div>
+              <div class="field">
+                <div class="control">
+                    <button id="new-item-btn" class="button is-link">Submit</button>
+                </div>
+              </div>
+            </form>
         </div>
-        <div class="item-column column is-three-quarters">
-          <h2 class="title is-size-4">Items</h2>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Name</th>
-                <th>Stock</th>
-                <th>Price</th>
-                <th>Category</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody class="item-table-body">
-              <!-- <tr class="list-item">
-                <td>1</td>
-                <td>Coca Cola</td>
-                <td>65</td>
-                <td>Rp. 15.000</td>
-                <td>Drinks</td>
-                <td>
-                  <div class="buttons are-small">
-                    <button class="button is-outlined is-info">Edit</button>
-                    <button class="button is-outlined is-success">
-                      Manage Stocks
-                    </button>
-                    <button class="button is-outlined is-danger">Delete</button>
-                  </div>
-                </td>
-              </tr> -->
-            </tbody>
+          </div>
+          <div class="column item-column is-three-quarters">
+            <h2 class="title is-size-4">Items</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Stock</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody class="item-table-body"></tbody>
           </table>
-        </div>
+          </div>
+      </div>
       </div>
     </div>
+    <script src="js/functions.js"></script>
     <script src="js/renderItems.js"></script>
     <script src="js/main.js"></script>
   </body>

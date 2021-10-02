@@ -9,6 +9,8 @@ async function loadItems() {
   let counts = 1;
 
   items.data.forEach((item) => {
+    item.name = capitalizeFirstLetter(item.name);
+    item.category = capitalizeFirstLetter(item.category);
     let itemRow = `
         <tr class="list-item">
             <td>${counts++}</td>
@@ -22,6 +24,7 @@ async function loadItems() {
                 <button class="button is-outlined is-success">
                     Manage Stocks
                 </button>
+                <button class="button is-outlined is-primary">Stock History</button>
                 <button class="button is-outlined is-danger">Delete</button>
                 </div>
             </td>
