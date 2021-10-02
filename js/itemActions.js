@@ -130,9 +130,14 @@ tableBody.addEventListener("click", function (event) {
           category: editModalCategory.value,
         }),
       })
-        .then((resp) => resp.text())
-        .then(() => {
-          alert("Item updated!");
+        .then((resp) => resp.json())
+        .then((data) => {
+          if (data.errors?.length > 0) {
+            alert(`Error! ${data.errors}`);
+          } else {
+            alert("Item updated!");
+          }
+
           window.history.go();
         })
         .catch((err) => console.log(err));
@@ -164,9 +169,13 @@ tableBody.addEventListener("click", function (event) {
           }),
         }
       )
-        .then((resp) => resp.text())
-        .then(() => {
-          alert("Stock updated!");
+        .then((resp) => resp.json())
+        .then((data) => {
+          if (data.errors?.length > 0) {
+            alert(`Error! ${data.errors}`);
+          } else {
+            alert("Stock updated!");
+          }
           window.history.go();
         })
         .catch((err) => console.log(err));

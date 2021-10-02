@@ -12,13 +12,19 @@ newItemForm.addEventListener("submit", function (event) {
       category: newItemCategory.value,
     }),
   })
-    .then((response) => response.text())
+    .then((response) => response.json())
     .then((data) => {
       newItemName.value = "";
       newItemStock.value = "";
       newItemPrice.value = "";
       newItemCategory.value = "drinks";
-      alert("New Item created!");
+
+      if (data.errors?.length > 0) {
+        alert(`Error! ${data.errors}`);
+      } else {
+        alert("New Item created!");
+      }
+
       window.history.go();
     })
     .catch((err) => console.log(err));
