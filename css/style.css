@@ -14,8 +14,8 @@ th:first-child {
 }
 
 .green-row {
-  background-color: hsl(171, 100%, 41%);
+  background-color: hsl(171, 100%, 85%);
 }
 .red-row {
-  background-color: hsl(48, 100%, 67%);
+  background-color: hsl(0, 100%, 90%);
 }
