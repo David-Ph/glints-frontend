@@ -23,3 +23,8 @@ th:first-child {
 .hidden{
   display: none;
 }
+
+#loading-gif{
+  margin-left: 8em;
+  margin-top: 5em;
+}
