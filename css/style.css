@@ -19,3 +19,7 @@ th:first-child {
 .red-row {
   background-color: hsl(0, 100%, 90%);
 }
+
+.hidden{
+  display: none;
+}

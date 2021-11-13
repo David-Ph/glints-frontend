@@ -28,6 +28,9 @@ const stockModal = document.querySelector(".stock-modal");
 const editModal = document.querySelector(".edit-modal");
 const historyModal = document.querySelector(".history-modal");
 
+// ? Loading gif
+const loading = document.querySelector('#loading-gif');
+
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }

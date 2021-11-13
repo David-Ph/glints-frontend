@@ -1,12 +1,14 @@
 async function loadItems(page = 1, limit = 5) {
   tableBody.innerHTML = "";
   paginationBody.innerHTML = "";
+  loading.classList.toggle('hidden');
   const items = await fetch(
     `https://glints-assessment.herokuapp.com/items?page=${page}&limit=${limit}`
   )
     .then((response) => response.json())
     .then((data) => data)
     .catch((err) => err);
+  
 
   items.data.forEach((item) => {
     item.name = capitalizeFirstLetter(item.name);
@@ -53,6 +55,7 @@ async function loadItems(page = 1, limit = 5) {
 
     paginationBody.insertAdjacentHTML("beforeend", paginationButton);
   }
+  loading.classList.toggle('hidden');
 }
 
 function switchPage(page) {
